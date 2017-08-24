@@ -1,0 +1,11 @@
+<?php
+
+$phonebook = json_decode(file_get_contents('phonebook.json'), true);
+
+echo '<table cellpadding="5" cellspacing="0" border="1"><tr><td><b>Имя</b></td><td><b>Фамилия</b></td><td><b>Адрес</b></td><td><b>Номер телефона</b></td></tr>';
+
+foreach ($phonebook as $key => $value) {
+	echo '<tr><td>' . $value['firstName'] . '</td><td>' . $value['lastName'] . '</td><td>' . $value['address'] . '</td><td>' . $value ['phoneNumber'] . '</td></tr>';
+}
+
+echo "</table>";
